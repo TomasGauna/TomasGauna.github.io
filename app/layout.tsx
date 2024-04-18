@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} bg-slate-200 h-screen`}>
+      <body className={`${quicksand.className} bg-slate-200 h-screen overflow-x-hidden`}>
         {children}
       </body>
     </html>
