@@ -1,32 +1,47 @@
-import React from 'react'
+// Experiencia.js
+import React from 'react';
 import Box from '../Box/Box';
 
 function Experiencia() {
   const projects = [
-  {
-    title: "Proyecto 1",
-    description: "Una breve descripción del proyecto 1.",
-    images: ["/iconos/linkedin.png", "/iconos/github.png"],
-    repoLink: "https://github.com/example/repo1"
-  },
-  {
-    title: "Proyecto 2",
-    description: "Una breve descripción del proyecto 2.",
-    images: ["/iconos/github.png"],
-    repoLink: "https://github.com/example/repo2"
-  },
-];
+    {
+      title: "Tabla Didáctica",
+      description: "Aplicación android que le enseña a niños los animales, colores y numeros en 3 idiomas que son el ingles, portugues y español",
+      images: ["/iconos/angular.png", "/iconos/ionic.png","/iconos/ts.png", "/iconos/html.png", "/iconos/css.png", "/iconos/sass.png", "/iconos/firebase.png"],
+      repoLink: "https://github.com/TomasGauna/app_tabla-didactica_android"
+    },
+    {
+      title: "Proyecto 2",
+      description: "Una breve descripción del proyecto 2.",
+      images: ["/iconos/github.png"],
+      repoLink: "https://github.com/example/repo2"
+    },
+    {
+      title: "Proyecto 3",
+      description: "Una breve descripción del proyecto 3.",
+      images: ["/iconos/github.png"],
+      repoLink: "https://github.com/example/repo3"
+    },
+    {
+      title: "Proyecto 4",
+      description: "Una breve descripción del proyecto 4.",
+      images: ["/iconos/github.png"],
+      repoLink: "https://github.com/example/repo4"
+    },
+  ];
 
   return (
-    <div>
-      <h1>Mis Proyectos</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className='flex flex-col items-center justify-center mt-4 w-full mb-8'>
+      <h1 className='text-5xl mb-8'>Experiencia</h1>
+      <div className='flex justify-center gap-4 w-full overflow-x-auto'>
         {projects.map((project, index) => (
-          <Box key={index} {...project} />
+          <div key={index}>
+            <Box {...project} />
+          </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default Experiencia
+export default Experiencia;
