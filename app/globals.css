@@ -1,10 +1,6 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
 @tailwind utilities
-=======
-@tailwind utilities;
-
 
 
 
@@ -17,4 +13,3 @@
 
 
 /*entre 1400 para abajo es la pantalla mas chica, de 1900 en adelante es la pantalla mas grade*/
->>>>>>> 6403eba3c3357578e5922efcc5b71610d319e070
