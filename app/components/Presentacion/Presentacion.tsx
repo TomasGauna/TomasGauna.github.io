@@ -5,7 +5,7 @@ import Link from 'next/link';
 function Presentacion() {
     return (
         <div>
-            <div className="flex justify-center lg:gap-20 lg:mt-20">
+            <div className="flex justify-center lg:gap-12 lg:mt-16">
                 <div className='flex justify-center'>
                     <Image
                         src={"/foto/tomi.jpg"}

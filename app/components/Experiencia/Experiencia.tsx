@@ -1,6 +1,4 @@
-
-import React from 'react'
-import Image from "next/image";
+import React from 'react';
 import Box from '../Box/Box';
 
 function Experiencia() {
@@ -14,7 +12,7 @@ function Experiencia() {
     {
       title: "Proyecto 2",
       description: "Una breve descripción del proyecto 2.",
-      images: ["/iconos/github.png"],
+      images: ["/iconos/angular.png"],
       repoLink: "https://github.com/example/repo2"
     },
     {
@@ -34,9 +32,9 @@ function Experiencia() {
   return (
     <div className='flex flex-col items-center justify-center mt-4 w-full mb-8'>
       <h1 className='text-5xl mb-8'>Experiencia</h1>
-      <div className='flex justify-center gap-4 w-full overflow-x-auto'>
+      <div className='flex justify-center gap-6 w-full overflow-x-auto'>
         {projects.map((project, index) => (
-          <div key={index}>
+          <div key={index} className="mb-8 mt-8">
             <Box {...project} />
           </div>
         ))}
