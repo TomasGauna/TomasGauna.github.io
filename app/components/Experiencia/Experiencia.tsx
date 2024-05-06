@@ -6,7 +6,7 @@ function Experiencia() {
     {
       title: "Tabla Didáctica",
       description: "Aplicación android que le enseña a niños los animales, colores y numeros en 3 idiomas que son el ingles, portugues y español",
-      images: ["/iconos/angular.png", "/iconos/ionic.png","/iconos/ts.png", "/iconos/html.png", "/iconos/css.png", "/iconos/sass.png", "/iconos/firebase.png"],
+      images: ["/iconos/angular.png", "/iconos/ionic.png", "/iconos/html.png", "/iconos/css.png", "/iconos/sass.png"],
       repoLink: "https://github.com/TomasGauna/app_tabla-didactica_android"
     },
     {
@@ -30,9 +30,11 @@ function Experiencia() {
   ];
 
   return (
-    <div className='flex flex-col items-center justify-center mt-4 w-full mb-8'>
-      <h1 className='text-5xl mb-8'>Experiencia</h1>
-      <div className='flex justify-center gap-6 w-full overflow-x-auto'>
+    <div className='flex flex-col items-center justify-center mt-8 w-full mb-8'>
+      {/* <h1 className='text-5xl mb-8'>Experiencia</h1> */}
+      <p className='lg:text-5xl text-4xl'>Experiencia</p>
+      {/* <div className='flex justify-center gap-6 w-full overflow-x-auto'> */}
+      <div className='mb-16 grid lg:flex h-96 w-screen justify-center lg:gap-6'>  
         {projects.map((project, index) => (
           <div key={index} className="mb-8 mt-8">
             <Box {...project} />
