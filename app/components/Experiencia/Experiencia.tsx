@@ -41,6 +41,7 @@ function Experiencia() {
           </div>
         ))}
       </div>
+      <p>ACA IRIA LO QUE HAGO EN NETNIX, QUE LO TENGO QUE PENSAR BIEN</p>
     </div>
   );
 }

@@ -10,8 +10,8 @@ function Presentacion() {
                     <Image
                         src={"/foto/tomi.jpg"}
                         alt={""}
-                        width={500}
-                        height={500}
+                        width={400}
+                        height={400}
                         className="rounded-full shadow-xl hover:scale-110 transition-transform"
                     />
                 </div>
@@ -25,7 +25,7 @@ function Presentacion() {
             </div>
             <div className='text-center lg:mt-28 lg:text-2xl mt-8 text-md'>
                 <p>Porteño, que su afecto por el mundo de la programacion lo impulsa a encontrar innovadoras respuestas a los desafíos del desarrollo de software.</p>
-                <p>Con 2 años de experiencia programando y actualmente trabajando como consultor trainee en <Link className='hover:underline text-blue-500' rel="stylesheet" href="https://www.netnix.net/">NETNIX</Link>.</p>
+                <p>Con 2 años de experiencia programando y actualmente trabajando como Consultor Trainee en <Link className='hover:underline text-blue-500' rel="stylesheet" href="https://www.netnix.net/">NETNIX</Link>.</p>
                 <p>Disfruto tanto del backend como del frontend.</p>
             </div>
         </div>

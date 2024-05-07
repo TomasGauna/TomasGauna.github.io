@@ -120,7 +120,7 @@ export function Header() {
       <div className='container'>
         <nav className={`${isNavbarVisible ? "visible" : ""}`}>
           <div onClick={handleCopyToClipboard} className="flex items-center">
-             <span className='cursor-pointer hover:scale-105 hover:text-blue-400 transition-transform duration-100'>tomi.gauna08@gmail.com</span>
+            <span className='cursor-pointer hover:scale-105 hover:text-blue-400 transition-transform duration-100'>tomi.gauna08@gmail.com</span>
           </div>
           <div className="nav-items">
             <Link href={'https://github.com/TomasGauna/'} passHref>
