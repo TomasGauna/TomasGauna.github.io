@@ -8,6 +8,7 @@ import Presentacion from './components/Presentacion/Presentacion';
 import Experiencia from './components/Experiencia/Experiencia';
 import Educacion from './components/Educacion/Educacion';
 import Stack from './components/Stack/Stack';
+import Contacto from './components/Contacto/Contacto';
 
 export default function Home() {
   return (
@@ -15,8 +16,9 @@ export default function Home() {
       <Header/>
       <Presentacion/>
       <Experiencia/>
-      {/* <Educacion/> */}
       <Stack/>
+      {/* <Educacion/> */}
+      <Contacto/>
       <ToastContainer/>
     </div>
   );
