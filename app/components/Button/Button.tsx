@@ -5,11 +5,6 @@ function Button() {
     const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    // const handleClick = async () => {
-    //     setIsLoading(true);
-    //     await delay(3500);
-    //     setIsLoading(false);
-    // };
     const handleClick = async () => {
         setIsLoading(true);
         

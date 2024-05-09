@@ -10,20 +10,20 @@ function Experiencia() {
       repoLink: "https://github.com/TomasGauna/app_tabla-didactica_android"
     },
     {
-      title: "Proyecto 2",
+      title: "Backend SLIM",
       description: "Una breve descripción del proyecto 2.",
       images: ["/iconos/angular.png"],
-      repoLink: "https://github.com/example/repo2"
+      repoLink: "https://github.com/TomasGauna/modelo_sp_progIII/tree/main/modelo-sp"
     },
     {
-      title: "Proyecto 3",
+      title: "Backend y Frontend",
       description: "Una breve descripción del proyecto 3.",
       images: ["/iconos/github.png"],
-      repoLink: "https://github.com/example/repo3"
+      repoLink: "https://github.com/TomasGauna/sp_laboIII"
     },
     {
-      title: "Proyecto 4",
-      description: "Una breve descripción del proyecto 4.",
+      title: "Backend PHP",
+      description: "LO TENGO QUE SUBIR A GITHUB",
       images: ["/iconos/github.png"],
       repoLink: "https://github.com/example/repo4"
     },
