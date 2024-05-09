@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from "next/image";
 import Link from 'next/link';
+import Button from '../Button/Button';
 
 function Presentacion() {
     return (
         <div>
-            <div className="flex justify-center lg:gap-12 lg:mt-16 mt-10">{/*items-center m-auto */}
+            <div className="flex justify-center lg:gap-14 lg:mt-16 mt-10">{/*items-center m-auto */}
                 <div className='flex justify-center'>
                     <Image
                         src={"/foto/tomi.jpg"}
@@ -20,6 +21,10 @@ function Presentacion() {
                         <p className='lg:text-7xl text-4xl font-black'>TOMAS GAUNA</p>
                         <p className='lg:text-3xl text-xl lg:mt-6 mt-4'>JUNIOR DEVELOPER</p>
                         <p className='lg:text-xl text-sm'>Tecnico Universitario en Programacion de UTN.</p>
+                        <div className='flex justify-center gap-20 lg:mt-4'>
+                            {/* <button>Descargar CV</button> */}
+                            <Button/>
+                        </div>
                     </div>
                 </div>
             </div>
