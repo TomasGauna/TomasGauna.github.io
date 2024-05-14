@@ -125,7 +125,7 @@ function Stack() {
       {/* <div className='mb-16 lg:flex h-96 w-screen justify-center lg:gap-8'>   */}
       <div className='grid grid-cols-7 gap-14'>
         {tecnologias.map((tecnologia, index) => (
-          <div key={index} className="mb-8 mt-8">
+          <div key={index} className="mb-8 mt-8 hover:scale-110 transition-transform">
               <Image src={tecnologia.image} alt={`Imagen ${tecnologia.name}`} width={75} height={75}/>
           </div>
         ))}

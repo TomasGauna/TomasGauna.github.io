@@ -17,7 +17,7 @@ export default function Home() {
       <Presentacion/>
       <Experiencia/>
       <Stack/>
-      {/* <Educacion/> */}
+      <Educacion/>
       <Contacto/>
       <ToastContainer/>
     </div>
