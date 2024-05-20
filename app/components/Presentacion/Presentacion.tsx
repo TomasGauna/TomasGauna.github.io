@@ -22,7 +22,6 @@ function Presentacion() {
                         <p className='lg:text-3xl text-xl lg:mt-6 mt-4'>JUNIOR DEVELOPER</p>
                         <p className='lg:text-xl text-sm'>Tecnico Universitario en Programacion de UTN.</p>
                         <div className='flex justify-center gap-20 lg:mt-4'>
-                            {/* <button>Descargar CV</button> */}
                             <Button/>
                         </div>
                     </div>
