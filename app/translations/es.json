@@ -1,0 +1,44 @@
+{
+    "presentacion": {
+      "nombre": "TOMAS GAUNA",
+      "titulo": "DESARROLLADOR JUNIOR",
+      "educacion": "Técnico Universitario en Programación en UTN.",
+      "boton": "Descargar CV",
+      "descripcion1": "Porteño, cuyo afecto por el mundo de la programación lo impulsa a encontrar respuestas innovadoras a los desafíos del desarrollo de software.",
+      "descripcion2": "Con 2 años de experiencia en programación y actualmente trabajando como Consultor Trainee en",
+      "descripcion3": "Disfruto tanto del backend como del frontend."
+    },
+    "experiencia": {
+      "title": "Experiencia",
+      "projects": [
+        {
+          "title": "Tabla Didáctica",
+          "description": "Aplicación android que le enseña a niños los animales, colores y números en 3 idiomas: inglés, portugués y español.",
+          "images": ["/iconos/angular.png", "/iconos/ionic.png", "/iconos/html.png", "/iconos/css.png", "/iconos/sass.png"],
+          "repoLink": "https://github.com/TomasGauna/app_tabla-didactica_android"
+        },
+        {
+          "title": "Backend SLIM",
+          "description": "Una breve descripción del proyecto 2.",
+          "images": ["/iconos/angular.png"],
+          "repoLink": "https://github.com/TomasGauna/modelo_sp_progIII/tree/main/modelo-sp"
+        },
+        {
+          "title": "Backend y Frontend",
+          "description": "Una breve descripción del proyecto 3.",
+          "images": ["/iconos/github.png"],
+          "repoLink": "https://github.com/TomasGauna/sp_laboIII"
+        },
+        {
+          "title": "Backend PHP",
+          "description": "LO TENGO QUE SUBIR A GITHUB",
+          "images": ["/iconos/github.png"],
+          "repoLink": "https://github.com/example/repo4"
+        }
+      ],
+      "boxTranslations": {
+        "verRepositorio": "Ver Repositorio"
+      }
+    }
+  }
+  
