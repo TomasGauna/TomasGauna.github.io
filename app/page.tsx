@@ -8,6 +8,7 @@ import Experiencia from './components/Experiencia/Experiencia';
 import Educacion from './components/Educacion/Educacion';
 import Stack from './components/Stack/Stack';
 import Contacto from './components/Contacto/Contacto';
+import Footer from './components/Footer/Footer'
 import translationsES from './translations/es.json';
 import translationsEN from './translations/en.json';
 import { useState } from 'react';
@@ -29,6 +30,7 @@ export default function Home() {
       <Stack />
       <Educacion />
       <Contacto />
+      <Footer />
       <ToastContainer />
     </div>
   );

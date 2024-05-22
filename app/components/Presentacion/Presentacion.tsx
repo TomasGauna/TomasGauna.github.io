@@ -4,15 +4,15 @@ import Link from 'next/link';
 import Button from '../Button/Button';
 
 interface PresentacionProps {
-  translations: {
-    nombre: string;
-    titulo: string;
-    educacion: string;
-    boton: string;
-    descripcion1: string;
-    descripcion2: string;
-    descripcion3: string;
-  };
+    translations: {
+        nombre: string;
+        titulo: string;
+        educacion: string;
+        boton: string;
+        descripcion1: string;
+        descripcion2: string;
+        descripcion3: string;
+    };
 }
 
 const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
