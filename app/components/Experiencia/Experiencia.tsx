@@ -27,7 +27,10 @@ const Experiencia: React.FC<ExperienciaProps> = ({ translations }) => {
           </div>
         ))}
       </div>
-      <p>ACA IRIA LO QUE HAGO EN NETNIX, QUE LO TENGO QUE PENSAR BIEN</p>
+      <div>
+        <p>ACA IRIA LO QUE HAGO EN NETNIX, QUE LO TENGO QUE PENSAR BIEN</p>
+      </div>
+      
     </div>
   );
 };
