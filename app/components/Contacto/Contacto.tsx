@@ -17,7 +17,7 @@ function Contacto() {
             <p className="text-lg">Teléfono: {numeroTelefono}</p>
           </div>
           <div className="flex flex-col gap-px items-center">
-            <Link href="mailto:tu_email@example.com" target="_blank" rel="noopener noreferrer">
+            <Link href="mailto:tomi.gauna08@gmail.com" target="_blank" rel="noopener noreferrer">
               <img src="/contacto/gmail.png" alt="Gmail" className="w-32 h-32 mb-2 hover:scale-105 transition-transform active:scale-100" />
             </Link>
             <p className="text-lg">Email: {email}</p>
