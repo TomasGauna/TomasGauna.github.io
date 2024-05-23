@@ -1,12 +1,13 @@
 {
-  "name": "porfolio",
+  "name": "tomasgauna",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "dependencies": {
     "@firebase/firestore": "^4.5.1",
@@ -26,8 +27,10 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "gh-pages": "^6.1.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.3",
     "typescript": "^5"
-  }
+  },
+  "homepage": "https://TomasGauna.github.io/tomasgauna/"
 }
