@@ -25,7 +25,8 @@ function Footer() {
                 </Link>
             </div>
         </div>
-        <div className='text-center mt-10 p-3 flex justify-center gap-5'>
+        <div className='text-center mt-10 p-3 flex items-center justify-center gap-5'>
+            <Image src={"/iconos/favicon.ico"} alt='' height={60} width={60} className='drop-shadow-xl'/>
             <p>Tomás Gauna</p>
             <p>&copy; {new Date().getFullYear()} Todos los derechos reservados.</p>
         </div>
