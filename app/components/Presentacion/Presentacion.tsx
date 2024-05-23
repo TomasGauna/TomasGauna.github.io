@@ -39,16 +39,16 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
           </div>
         </div>
       </div>
-      <div className="text-center lg:mt-28 lg:text-2xl mt-8 text-md">
-        <p>{translations.descripcion1}</p>
-        <p>
+      <div className="text-center lg:mt-28 lg:text-2xl mt-8 text-md w-11/12 mx-auto flex flex-col items-center">
+        <p className="mb-1">{translations.descripcion1}</p>
+        <p className="mb-1">
           {translations.descripcion2}{' '}
-          <Link className="hover:underline text-blue-500 active:text-blue-900" rel="stylesheet" href="https://www.netnix.net/">
+          <Link className="hover:underline text-blue-500 active:text-blue-900" href="https://www.netnix.net/">
             NETNIX
           </Link>
           .
         </p>
-        <p>{translations.descripcion3}</p>
+        <p className="mb-4">{translations.descripcion3}</p>
       </div>
     </div>
   );
