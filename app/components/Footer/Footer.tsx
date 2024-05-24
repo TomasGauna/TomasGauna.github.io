@@ -35,10 +35,10 @@ function Footer() {
         <footer className='border-t border-t-gray-200 pt-10 text-base'>
             <div className='flex flex-col items-center justify-center'>
                 <p className='mb-5'>Redes sociales</p>
-                <div className='flex justify-center gap-3 lg:gap-6'>
+                <div className='flex justify-center gap-4 lg:gap-6'>
                     {redes.map((red, index)=>(
                         <Link href={red.link} key={index}>
-                            <Image src={red.imgSrc} alt={red.name} height={60} width={60} className='hover:scale-105 transition-transform'/>
+                            <Image src={red.imgSrc} alt={red.name} height={60} width={60} className='hover:scale-105 transition-transform lg:w-[60px] lg:h-[60px] w-12'/>
                         </Link>
                     ))}
                     {/* <Link href={"https://www.linkedin.com/in/tomas-agustin-gauna-373290292/"}>
@@ -58,8 +58,8 @@ function Footer() {
                     </Link> */}
                 </div>
             </div>
-            <div className='text-center mt-10 p-3 flex items-center justify-center gap-5'>
-                <Image src={"/iconos/favicon.ico"} alt='' height={60} width={60} className='drop-shadow-xl'/>
+            <div className='text-center mt-10 p-3 flex items-center justify-center lg:gap-5 gap-2'>
+                <Image src={"/iconos/favicon.ico"} alt='' height={60} width={60} className='lg:w-[60px] lg:h-[60px] w-12 drop-shadow-xl'/>
                 <p>Tomás Gauna</p>
                 <p>&copy; {new Date().getFullYear()} Todos los derechos reservados.</p>
             </div>
