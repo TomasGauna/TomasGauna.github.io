@@ -56,8 +56,8 @@ export function Header({ onLanguageChange }: HeaderProps) {
 
   return (
     <>
-      <header className='w-full bg-gray-100'>
-        <div className='container mx-auto py-5 px-4 md:px-8 lg:px-16 xl:px-5 flex justify-between items-center'>
+      <header className='w-screen bg-gray-100'>
+        <div className='container mx-auto py-5 px-4 md:px-8 lg:px-16 xl:px-5 flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-4'>
           <div onClick={handleCopyToClipboard} className='flex items-center'>
             <span className='cursor-pointer hover:scale-105 hover:text-blue-400 transition-transform duration-300'>
               tomi.gauna08@gmail.com
