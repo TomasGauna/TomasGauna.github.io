@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 function Footer() {
-
     const redes = [
         { 
             name: 'Linkedin', 
@@ -36,7 +35,7 @@ function Footer() {
         <footer className='border-t border-t-gray-200 pt-10 text-base'>
             <div className='flex flex-col items-center justify-center'>
                 <p className='mb-5'>Redes sociales</p>
-                <div className='flex justify-center gap-6'>
+                <div className='flex justify-center gap-3 lg:gap-6'>
                     {redes.map((red, index)=>(
                         <Link href={red.link} key={index}>
                             <Image src={red.imgSrc} alt={red.name} height={60} width={60} className='hover:scale-105 transition-transform'/>

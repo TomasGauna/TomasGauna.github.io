@@ -27,9 +27,9 @@ function Educacion() {
       <p className='lg:text-5xl text-4xl text-center mb-14'>Educación</p>
       <div className='w-full flex flex-col items-center space-y-8 mt-10 mb-10'>
           <div className='w-full h-full flex flex-col gap-5 items-center justify-center'>
-          {educations.map((education, index) => (
-            <BoxE key={index} education={education} />
-          ))}
+            {educations.map((education, index) => (
+              <BoxE key={index} education={education} />
+            ))}
           </div>
       </div>
     </div>
