@@ -18,8 +18,8 @@ interface ExperienciaProps {
 
 const Experiencia: React.FC<ExperienciaProps> = ({ translations }) => {
   return (
-    <div className='flex flex-col items-center justify-center mt-8 w-full mb-8'>
-      <p className='lg:text-5xl text-4xl'>{translations.title}</p>
+    <div className='flex flex-col items-center justify-center mt-10 w-full mb-8'> {/* ACA SEPARO DEL SEPARATOR */}
+      <p className='lg:text-5xl text-4xl mb-14'>{translations.title}</p>
       <div className='mb-16 grid lg:flex h-96 w-screen justify-center lg:gap-6'>
         {translations.projects.map((project, index) => (
           <div key={index} className='mb-8 mt-8'>

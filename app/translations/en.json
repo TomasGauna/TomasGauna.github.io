@@ -1,12 +1,12 @@
 {
     "presentacion": {
-      "nombre": "TOMAS GAUNA",
-      "titulo": "JUNIOR DEVELOPER",
-      "educacion": "University Technician in Programming at UTN.",
-      "boton": "Download CV",
-      "descripcion1": "A Buenos Aires native, whose passion for the world of programming drives him to find innovative solutions to software development challenges.",
-      "descripcion2": "With 2 years of programming experience and currently working as a Trainee Consultant at",
-      "descripcion3": "I enjoy both backend and frontend development."
+        "nombre": "TOMAS GAUNA",
+        "titulo": "JUNIOR DEVELOPER",
+        "educacion": "University Technician in Programming of UTN.",
+        "boton": "Download CV",
+        "descripcion1": "A Buenos Aires native, whose passion for the world of programming drives him to find innovative solutions to software development challenges.",
+        "descripcion2": "With 2 years of programming experience and currently working as a Trainee Consultant at",
+        "descripcion3": "I enjoy both backend and frontend development."
     },
     "experiencia": {
         "title": "Experiencia",

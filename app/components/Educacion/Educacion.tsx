@@ -23,9 +23,9 @@ const educations = [
 
 function Educacion() {
   return (
-    <div className='flex flex-col items-center justify-start mt-8 w-full mb-8'>
-      <p className='lg:text-5xl text-4xl text-center mb-8'>Educación</p>
-      <div className='w-full flex flex-col items-center space-y-8'>
+    <div className='flex flex-col items-center justify-start mt-8 w-full mb-6'>
+      <p className='lg:text-5xl text-4xl text-center mb-14'>Educación</p>
+      <div className='w-full flex flex-col items-center space-y-8 mt-10 mb-10'>
           <div className='w-full h-full flex flex-col gap-5 items-center justify-center'>
           {educations.map((education, index) => (
             <BoxE key={index} education={education} />

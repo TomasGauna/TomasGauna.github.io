@@ -17,7 +17,7 @@ interface PresentacionProps {
 
 const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
   return (
-    <div>
+    <div className='mb-14'> {/* ACA SEPARO DEL SEPARATOR */}
       <div className="flex justify-center lg:gap-14 lg:mt-16 mt-10">
         <div className="flex justify-center">
           <Image
@@ -43,7 +43,7 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
         <p className="mb-1">{translations.descripcion1}</p>
         <p className="mb-2">
           {translations.descripcion2}{' '}
-          <Link className="hover:underline text-blue-500 active:text-blue-900" href="https://www.netnix.net/">
+          <Link className="hover:underline text-blue-600 active:text-blue-900" href="https://www.netnix.net/">
             NETNIX
           </Link>
           .
