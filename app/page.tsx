@@ -62,7 +62,7 @@ export default function Home() {
   const translations = language === 'es' ? translationsES : translationsEN;
 
   return (
-    <div className='w-screen h-screen lg:p-0 p-2 pt-0 overflow-x-hidden'>
+    <div className='w-screen h-screen'>
       <Header onLanguageChange={handleLanguageChange} />
       <Reveal width="100%">
         <Presentacion translations={translations.presentacion} />
