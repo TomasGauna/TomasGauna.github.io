@@ -1,120 +1,149 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Stack() {
   const tecnologias = [
     { 
       name: 'C', 
-      image: '/iconos/c.png' 
+      image: '/iconos/c.png',
+      url: 'https://en.cppreference.com/w/c'
     },
     { 
       name: 'C++', 
-      image: '/iconos/cplus.png' 
+      image: '/iconos/cplus.png',
+      url: 'https://en.cppreference.com/w/cpp'
     },
     { 
       name: 'C#', 
-      image: '/iconos/csharp.png' 
+      image: '/iconos/csharp.png',
+      url: 'https://learn.microsoft.com/en-us/dotnet/csharp/'
     },
     { 
       name: '.NET', 
-      image: '/iconos/net.png' 
+      image: '/iconos/net.png',
+      url: 'https://dotnet.microsoft.com/'
     },
     { 
       name: 'Js', 
-      image: '/iconos/js.png' 
+      image: '/iconos/js.png',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
     { 
       name: 'Ts', 
-      image: '/iconos/ts.png' 
+      image: '/iconos/ts.png',
+      url: 'https://www.typescriptlang.org/'
     },
     { 
       name: 'React', 
-      image: '/iconos/react.png' 
+      image: '/iconos/react.png',
+      url: 'https://reactjs.org/'
     },
     { 
       name: 'PHP', 
-      image: '/iconos/php.png' 
+      image: '/iconos/php.png',
+      url: 'https://www.php.net/'
     },
     { 
       name: 'Ruby', 
-      image: '/iconos/ruby.png' 
+      image: '/iconos/ruby.png',
+      url: 'https://www.ruby-lang.org/en/'
     },
     { 
       name: 'Python', 
-      image: '/iconos/python.png' 
+      image: '/iconos/python.png',
+      url: 'https://www.python.org/'
     },
     { 
       name: 'HTML', 
-      image: '/iconos/html.png' 
+      image: '/iconos/html.png',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
     },
     { 
       name: 'Node', 
-      image: '/iconos/node.png' 
+      image: '/iconos/node.png',
+      url: 'https://nodejs.org/'
     },
     { 
       name: 'Slim', 
-      image: '/iconos/slim.png' 
+      image: '/iconos/slim.png',
+      url: 'https://www.slimframework.com/'
     },
     { 
       name: 'Jquery', 
-      image: '/iconos/jquery.png' 
+      image: '/iconos/jquery.png',
+      url: 'https://jquery.com/'
     },
     { 
       name: 'CSS', 
-      image: '/iconos/css.png' 
+      image: '/iconos/css.png',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
     },
     { 
       name: 'Sass', 
-      image: '/iconos/sass.png' 
+      image: '/iconos/sass.png',
+      url: 'https://sass-lang.com/'
     },
     { 
       name: 'Tailwind', 
-      image: '/iconos/tailwind.png' 
+      image: '/iconos/tailwind.png',
+      url: 'https://tailwindcss.com/'
     },
     { 
       name: 'Bootstrap', 
-      image: '/iconos/bootstrap.png' 
+      image: '/iconos/bootstrap.png',
+      url: 'https://getbootstrap.com/'
     },
     { 
       name: 'Angular', 
-      image: '/iconos/angular.png' 
+      image: '/iconos/angular.png',
+      url: 'https://angular.io/'
     },
     { 
       name: 'Ionic', 
-      image: '/iconos/ionic.png' 
+      image: '/iconos/ionic.png',
+      url: 'https://ionicframework.com/'
     },
     { 
       name: 'Django', 
-      image: '/iconos/django.png' 
+      image: '/iconos/django.png',
+      url: 'https://www.djangoproject.com/'
     },
     { 
       name: 'Docker', 
-      image: '/iconos/docker.png' 
+      image: '/iconos/docker.png',
+      url: 'https://www.docker.com/'
     },
     { 
       name: 'Firebase', 
-      image: '/iconos/firebase.png' 
+      image: '/iconos/firebase.png',
+      url: 'https://firebase.google.com/'
     },
     { 
       name: 'Git', 
-      image: '/iconos/git.png' 
+      image: '/iconos/git.png',
+      url: 'https://git-scm.com/'
     },
     { 
       name: 'Linux', 
-      image: '/iconos/linux.png' 
+      image: '/iconos/linux.png',
+      url: 'https://www.kernel.org/'
     },
     { 
       name: 'SQL', 
-      image: '/iconos/sql.png' 
+      image: '/iconos/sql.png',
+      url: 'https://www.w3schools.com/sql/'
     },
     { 
       name: 'MongoDB', 
-      image: '/iconos/mongodb.png' 
+      image: '/iconos/mongodb.png',
+      url: 'https://www.mongodb.com/'
     },
     { 
       name: 'MySQL', 
-      image: '/iconos/mysql.png' 
-    },
+      image: '/iconos/mysql.png',
+      url: 'https://www.mysql.com/'
+    }
   ];
 
   return (
@@ -126,7 +155,9 @@ function Stack() {
       <div className='grid lg:grid-cols-7 grid-cols-4 gap-4 lg:gap-14 mt-6'>
         {tecnologias.map((tecnologia, index) => (
           <div key={index} className="mb-8 mt-8 hover:scale-110 transition-transform">
-              <Image src={tecnologia.image} alt={`Imagen ${tecnologia.name}`} width={75} height={75}/>
+              <Link href={tecnologia.url}>
+                <Image src={tecnologia.image} alt={`Imagen ${tecnologia.name}`} width={75} height={75}/>
+              </Link>
           </div>
         ))}
       </div>
