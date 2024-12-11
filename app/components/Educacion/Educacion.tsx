@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Image from 'next/image';
 import BoxE from '../BoxE/BoxE';
@@ -17,7 +16,7 @@ const educations = [
   {
     imgSrc: '/educacion/codo-codo.png',
     description: 'Descripción del curso/programa Codo a Codo',
-    date: 'Mar 2024 - En Curso',
+    date: 'Mar 2024 - Ago 2024',
   },
 ];
 
