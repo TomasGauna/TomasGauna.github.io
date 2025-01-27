@@ -155,7 +155,7 @@ function Stack() {
       <div className='grid lg:grid-cols-7 grid-cols-4 gap-4 lg:gap-14 mt-6'>
         {tecnologias.map((tecnologia, index) => (
           <div key={index} className="mb-8 mt-8 hover:scale-110 transition-transform">
-              <Link href={tecnologia.url}>
+              <Link href={tecnologia.url} target="_blank">
                 <Image src={tecnologia.image} alt={`Imagen ${tecnologia.name}`} width={75} height={75}/>
               </Link>
           </div>
