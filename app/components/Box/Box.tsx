@@ -31,7 +31,7 @@ const Box: React.FC<BoxProps> = ({ title, description, repoLink, images, transla
           ))}
         </div>
         {repoLink && translations && (
-          <Link href={`${repoLink}`} className='text-blue-500 text-center hover:underline'>
+          <Link href={`${repoLink}`} className='text-blue-500 text-center hover:underline' target="_blank">
             {translations.verRepositorio}
           </Link>
         )}

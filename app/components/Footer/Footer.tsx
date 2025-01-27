@@ -37,7 +37,7 @@ function Footer() {
                 <p className='mb-5'>Redes sociales</p>
                 <div className='flex justify-center gap-4 lg:gap-6'>
                     {redes.map((red, index)=>(
-                        <Link href={red.link} key={index}>
+                        <Link href={red.link} key={index} target="_blank">
                             <Image src={red.imgSrc} alt={red.name} height={60} width={60} className='hover:scale-105 transition-transform lg:w-[60px] lg:h-[60px] w-12'/>
                         </Link>
                     ))}

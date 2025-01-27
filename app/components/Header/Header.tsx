@@ -64,7 +64,7 @@ export function Header({ onLanguageChange }: HeaderProps) {
             </span>
           </div>
           <div className='flex gap-3'>
-            <Link href={'https://github.com/TomasGauna/'} passHref>
+            <Link href={'https://github.com/TomasGauna/'} passHref target="_blank">
               <Image
                 alt='Icono de Github'
                 src={'/iconos/github.png'}
@@ -73,7 +73,7 @@ export function Header({ onLanguageChange }: HeaderProps) {
                 className='cursor-pointer hover:scale-110 transition-transform duration-300'
               />
             </Link>
-            <Link href={'https://www.linkedin.com/in/tomas-agustin-gauna-373290292/'} passHref>
+            <Link href={'https://www.linkedin.com/in/tomas-agustin-gauna-373290292/'} passHref target="_blank">
               <Image
                 alt='Icono de LinkedIn'
                 src={'/iconos/linkedin.png'}
