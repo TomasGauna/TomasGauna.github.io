@@ -43,7 +43,7 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
         <p className="mb-1">{translations.descripcion1}</p>
         <p className="mb-2">
           {translations.descripcion2}{' '}
-          <Link className="hover:underline text-blue-600 active:text-blue-900" href="https://www.netnix.net/" target="_blank">
+          <Link className="hover:underline text-blue-600 active:text-blue-900" href="https://www.netnix.net/">
             NETNIX
           </Link>
           .
