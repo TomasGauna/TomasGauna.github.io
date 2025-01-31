@@ -11,6 +11,8 @@ interface HeaderProps {
 export function Header({ onLanguageChange }: HeaderProps) {
   const [language, setLanguage] = useState('es');
 
+  const IMAGE_LANGUAGE_PATH = '/iconos/idiomas.png';
+
   const handleCopyToClipboard = () => {
     const email = 'tomi.gauna08@gmail.com';
     const tempTextarea = document.createElement('textarea');
@@ -56,7 +58,7 @@ export function Header({ onLanguageChange }: HeaderProps) {
 
   return (
     <>
-      <header className='w-screen bg-gray-100'>
+      {/* <header className='w-screen bg-gray-100'>
         <div className='container mx-auto py-5 px-4 md:px-8 lg:px-16 xl:px-5 flex justify-between items-center lg:flex-row flex-col lg:gap-0 gap-4'>
           <div onClick={handleCopyToClipboard} className='flex items-center'>
             <span className='cursor-pointer hover:scale-105 hover:text-blue-400 transition-transform duration-300'>
@@ -82,7 +84,6 @@ export function Header({ onLanguageChange }: HeaderProps) {
                 className='cursor-pointer hover:scale-110 transition-transform duration-300'
               />
             </Link>
-            {/* Selector de idioma */}
             <div className='flex items-center'>
               <select value={language} onChange={handleLanguageChange} className='p-2'>
                 <option value='es'>Español</option>
@@ -90,6 +91,15 @@ export function Header({ onLanguageChange }: HeaderProps) {
               </select>
             </div>
           </div>
+        </div>
+      </header> */}
+
+      <header className='bg-slate-100 w-screen h-14 flex justify-around items-center'>
+        <div className='bg-red-300 w-full h-auto text-center'>
+          a
+        </div>
+        <div className='bg-green-400 w-full h-auto flex justify-center items-center'>
+          <Image src={IMAGE_LANGUAGE_PATH} alt='Selector de idiomas' width={40} height={40}/>
         </div>
       </header>
     </>

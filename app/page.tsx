@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <div className='w-screen h-screen'>
       <Header onLanguageChange={handleLanguageChange} />
-      <Reveal width="100%">
+      {/* <Reveal width="100%">
         <Presentacion translations={translations.presentacion} />
       </Reveal>
       <Reveal width='100%'>
@@ -95,7 +95,7 @@ export default function Home() {
         <Separator />
       </Reveal>
       <Footer />
-      <ToastContainer />
+      <ToastContainer /> */}
     </div>
   );
 }
