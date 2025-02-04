@@ -143,6 +143,16 @@ const TechSlider = () => {
             name: 'MySQL',
             image: '/iconos/mysql.png',
             url: 'https://www.mysql.com/'
+        },
+        {
+            name: 'NestJS',
+            image: '/iconos/nestjs.png',
+            url: 'https://nestjs.com/'
+        },
+        {
+            name: 'NextJS',
+            image: '/iconos/nextjs.png',
+            url: 'https://nextjs.org/'
         }
     ];
 
