@@ -53,6 +53,7 @@ import { useState } from 'react';
 import { Reveal } from './components/Reveal/Reveal';
 import Separator from './components/Separator/Separator';
 import Image from 'next/image'
+import TechSlider from './components/Stack/TechSlider';
 
 export default function Home() {
   const [language, setLanguage] = useState('es');
@@ -95,7 +96,7 @@ export default function Home() {
       </header>
 
       {/* Main */}
-      <main className="w-full flex items-center justify-center p-3 mt-2 text-white">
+      <main className="w-full flex flex-col items-center justify-center gap-10 p-3 mt-2 text-white">
         <section className="w-full flex justify-evenly gap-4">
           <div className="w-2/3 relative">
             <Image
@@ -121,6 +122,12 @@ export default function Home() {
             <div className="col-span-2 rounded-3xl w-full h-44 p-4 bg-[#1c1e23] bg-opacity-70 flex items-center justify-center">
               <span>Algo sobre mí</span>
             </div>
+          </div>
+        </section>
+        <section className="w-full flex flex-col justify-evenly gap-5 mt-8">
+          <h2 className="text-center text-2xl mb-8">Tecnologías</h2>
+          <div className="min-h-36 w-full bg-[#1c1e23] flex rounded-3xl items-center justify-center">
+            <TechSlider />
           </div>
         </section>
       </main>
