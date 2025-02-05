@@ -153,6 +153,11 @@ const TechSlider = () => {
             name: 'NextJS',
             image: '/iconos/nextjs.png',
             url: 'https://nextjs.org/'
+        },
+        {
+            name: 'AWS',
+            image: '/iconos/aws.png',
+            url: 'https://aws.amazon.com/'
         }
     ];
 
@@ -171,9 +176,9 @@ const TechSlider = () => {
                         <Image
                             src={tech.image}
                             alt={tech.name}
-                            className="h-20 w-20 grayscale hover:grayscale-0"
-                            width={80}
-                            height={80}
+                            className="h-16 w-16 grayscale hover:grayscale-0"
+                            width={16}
+                            height={16}
                         />
                     </Link>
                 ))}

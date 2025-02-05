@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <div className="max-w-6xl flex flex-col items-center justify-center mx-auto">
       {/* Header */}
-      <header className="w-full flex items-center justify-between p-4 mt-2 text-white">
+      <header className="w-full backdrop-blur-sm flex items-center justify-between p-4 mt-2 text-white">
         <div className="w-1/2">
           <span className="cursor-pointer">{EMAIL}</span>
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
       </header>
 
       {/* Main */}
-      <main className="w-full flex flex-col items-center justify-center gap-10 p-3 mt-2 text-white">
+      <main className="w-full flex flex-col items-center justify-center gap-10 p-3 mt-12 text-white">
         <section className="w-full flex justify-evenly gap-4">
           <div className="w-2/3 relative">
             <Image
@@ -126,9 +126,15 @@ export default function Home() {
         </section>
         <section className="w-full flex flex-col justify-evenly gap-5 mt-8">
           <h2 className="text-center text-2xl mb-8">Tecnologías</h2>
-          <div className="min-h-36 w-full bg-[#1c1e23] flex rounded-3xl items-center justify-center">
+          <div className="shadow-lg shadow-gray-500 min-h-36 w-full bg-[#1c1e23] flex rounded-3xl items-center justify-center">
             <TechSlider />
           </div>
+        </section>
+        <section className="w-full flex flex-col justify-evenly gap-5 mt-8">
+          <h2 className="text-center text-2xl mb-8">Proyectos</h2>
+        </section>
+        <section className="w-full flex flex-col justify-evenly gap-5 mt-8">
+          <h2 className="text-center text-2xl mb-8">Experiencia</h2>
         </section>
       </main>
     </div>
