@@ -11,7 +11,7 @@ interface Experiencie {
 function BoxExperiencie({ title, from, to, description, imagePath }: Experiencie) {
     return (
         <div
-            className="w-80 h-[500px] rounded-lg bg-cover bg-center relative flex flex-col text-white shadow-lg hover:"
+            className="w-80 h-[500px] rounded-lg bg-cover bg-center relative flex flex-col text-white shadow-lg hover:scale-110 transition-all"
             style={{ backgroundImage: `url(${imagePath})` }}
         >
             <div className="absolute inset-0 bg-[#1c1e23]/60 rounded-lg"></div>

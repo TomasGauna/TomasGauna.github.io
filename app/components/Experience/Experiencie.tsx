@@ -16,8 +16,8 @@ interface Experiencie {
 function Experiencie({experiencies}: ExperiencieProps) {
     return (
         <div className='flex justify-center gap-6'>
-            {experiencies.map((experiencies) => (
-                <BoxExperiencie {...experiencies}/>
+            {experiencies.map((experiencie) => (
+                <BoxExperiencie key={experiencie.title} {...experiencie}/>
             ))}
         </div>
     )

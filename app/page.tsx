@@ -58,6 +58,7 @@ import Project from './components/Projects/Projects'
 import Experiencie from './components/Experience/Experiencie';
 import { motion } from 'framer-motion';
 import { useTheme } from './context/ThemeContext';
+import Education from './components/Education/Education';
 
 export default function Home() {
   const [language, setLanguage] = useState('es');
@@ -123,6 +124,30 @@ export default function Home() {
       "imagePath": "https://www.netnix.net/wp-content/uploads/2023/09/fondo4.svg"
     }
   ]
+
+  const educationData = [
+    {
+      title: "Universidad Tecnológica Nacional",
+      description: "Técnico universitario en programación.",
+      from: "Febrero 2022",
+      to: "Diciembre 2023",
+      imagePath: "/iconos/programacion.png",
+    },
+    {
+      title: "Bootcamp de Desarrollo Web",
+      description: "Especialización en React y Node.js.",
+      from: "2022",
+      to: "2023",
+      imagePath: "/images/bootcamp.jpg",
+    },
+    // {
+    //   title: "Curso de Docker y Kubernetes",
+    //   description: "Administración de contenedores en producción.",
+    //   from: "2023",
+    //   to: "",
+    //   imagePath: "/images/docker.jpg",
+    // },
+  ];
 
   return (
     <div className="max-w-6xl flex flex-col items-center justify-center mx-auto">
@@ -198,11 +223,18 @@ export default function Home() {
           <h2 className="text-center text-2xl mb-8">Proyectos</h2>
           <Project projects={projects} />
         </section>
-        <section className="w-full flex flex-col justify-evenly gap-5 mt-8">
+        <section className="w-full flex flex-col justify-evenly gap-5 mt-4">
           <h2 className="text-center text-2xl mb-8">Experiencia</h2>
           <Experiencie experiencies={experiencies} />
         </section>
+        <section className="w-full flex flex-col justify-evenly gap-5 mt-4">
+          <h2 className="text-center text-2xl mb-8">Educación</h2>
+          <Education educations={educationData}/>
+        </section>
       </main>
+      <footer>
+        Tomas Gauna
+      </footer>
     </div>
   );
 }
