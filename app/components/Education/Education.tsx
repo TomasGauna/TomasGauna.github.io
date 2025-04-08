@@ -16,24 +16,31 @@ function Education({ educations }: { educations: Education[] }) {
 
     useEffect(() => {
         if (openIndex !== null && contentRefs.current[openIndex]) {
-            // Usar un pequeño retraso para asegurar que la animación haya terminado
-            setTimeout(() => {
-                contentRefs.current[openIndex]?.scrollIntoView({
-                    behavior: "smooth", // Desplazamiento suave
-                    block: "start",     // Alinea el elemento en la parte superior de la ventana
+            // Calcular la altura del header (ajusta este valor según tu diseño)
+            const headerHeight = 80; // Ejemplo: 80px, ajusta según tu header real
+
+            // Obtener la posición del elemento
+            const element = contentRefs.current[openIndex];
+            if (element) {
+                const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                
+                // Desplazar con un offset para el header
+                window.scrollTo({
+                    top: elementPosition - headerHeight - 20, // 20px adicionales de padding
+                    behavior: 'smooth'
                 });
-            }, 300); // Ajusta este valor según la duración de tu animación
+            }
         }
     }, [openIndex]);
 
     return (
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto py-12">
             {educations.map((edu, index) => (
                 <div key={index} className="mb-6">
                     {/* Botón de acordeón */}
                     <motion.button
                         onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                        className="w-full text-left p-4 bg-gray-800 text-white rounded-lg shadow-md flex justify-between items-center"
+                        className="w-full text-left p-4 bg-[#1c1e23] text-white rounded-lg shadow-md flex justify-between items-center"
                         aria-expanded={openIndex === index}
                         role="button"
                         whileHover={{ scale: 1.02 }}
@@ -52,7 +59,7 @@ function Education({ educations }: { educations: Education[] }) {
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.3 }}
                                 className="mt-4"
-                                ref={(el) => (contentRefs.current[index] = el)} // Asignar la referencia
+                                ref={(el) => (contentRefs.current[index] = el)}
                             >
                                 <BoxEducation {...edu} />
                             </motion.div>

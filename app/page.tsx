@@ -1,41 +1,3 @@
-// "use client"
-
-// import './globals.css';
-// import { Header } from './components/Header/Header';
-// import { ToastContainer } from 'react-toastify';
-// import Presentacion from './components/Presentacion/Presentacion';
-// import Experiencia from './components/Experiencia/Experiencia';
-// import Educacion from './components/Educacion/Educacion';
-// import Stack from './components/Stack/Stack';
-// import Contacto from './components/Contacto/Contacto';
-// import Footer from './components/Footer/Footer'
-// import translationsES from './translations/es.json';
-// import translationsEN from './translations/en.json';
-// import { useState } from 'react';
-// import { Reveal } from './components/Reveal/Reveal';
-
-// export default function Home() {
-//   const [language, setLanguage] = useState('es');
-//   const handleLanguageChange = (language: string) => {
-//     setLanguage(language);
-//   };
-
-//   const translations = language === 'es' ? translationsES : translationsEN;
-
-
-//   return (
-//     <div className='w-screen h-screen lg:p-0 p-2 pt-0'>
-//       <Header onLanguageChange={handleLanguageChange} />
-//       <Presentacion translations={translations.presentacion} />
-//       <Experiencia translations={translations.experiencia}/>
-//       <Stack />
-//       <Educacion />
-//       <Contacto />
-//       <Footer />
-//       <ToastContainer />
-//     </div>
-//   );
-// }
 "use client"
 
 import './globals.css';
@@ -129,8 +91,8 @@ export default function Home() {
     {
       title: "Universidad Tecnológica Nacional",
       description: "Técnico universitario en programación.",
-      from: "Febrero 2022",
-      to: "Diciembre 2023",
+      from: "Feb 2022",
+      to: "Dic 2023",
       imagePath: "/iconos/programacion.png",
     },
     {
@@ -140,19 +102,12 @@ export default function Home() {
       to: "2023",
       imagePath: "/images/bootcamp.jpg",
     },
-    // {
-    //   title: "Curso de Docker y Kubernetes",
-    //   description: "Administración de contenedores en producción.",
-    //   from: "2023",
-    //   to: "",
-    //   imagePath: "/images/docker.jpg",
-    // },
   ];
 
   return (
-    <div className="max-w-6xl flex flex-col items-center justify-center mx-auto">
+    <div className="max-w-6xl flex flex-col items-center justify-center mx-auto px-4">
       {/* Header */}
-      <header className="w-full backdrop-blur-sm flex items-center justify-between p-4 mt-2 text-white">
+      <header className="w-full max-w-6xl sticky top-4 z-50 transition-all duration-300 bg-[#1c1e23]/60 backdrop-blur-md flex items-center justify-between p-4 text-white rounded-2xl shadow-md">
         <div className="w-1/2">
           <span className="cursor-pointer">{EMAIL}</span>
         </div>
@@ -185,8 +140,8 @@ export default function Home() {
       </header>
 
       {/* Main */}
-      <main className="w-full flex flex-col items-center justify-center gap-10 p-3 mt-12 text-white">
-        <section className="w-full flex justify-evenly gap-4">
+      <main className="w-full max-w-6xl flex flex-col items-center justify-center gap-10 p-3 mt-12 text-white">
+        <section className="w-full max-w-6xl flex justify-evenly gap-4">
           <div className="w-2/3 relative">
             <Image
               src={IMAGE_PHOTO_LANDSCAPE_PATH}
@@ -229,12 +184,14 @@ export default function Home() {
         </section>
         <section className="w-full flex flex-col justify-evenly gap-5 mt-4">
           <h2 className="text-center text-2xl mb-8">Educación</h2>
-          <Education educations={educationData}/>
+          <Education educations={educationData} />
         </section>
+        <footer className='w-full flex flex-col justify-evenly gap-5 mt-4 mb-8'>
+          <div className="min-h-48 w-full bg-[#1c1e23] flex rounded-3xl items-center justify-center">
+            a
+          </div>
+        </footer>
       </main>
-      <footer>
-        Tomas Gauna
-      </footer>
     </div>
   );
 }

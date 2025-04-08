@@ -176,9 +176,9 @@ const TechSlider = () => {
                         <Image
                             src={tech.image}
                             alt={tech.name}
-                            className="h-16 w-16 grayscale hover:grayscale-0"
-                            width={16}
-                            height={16}
+                            className="h-14 w-14 grayscale hover:grayscale-0"
+                            width={14}
+                            height={14}
                         />
                     </Link>
                 ))}
