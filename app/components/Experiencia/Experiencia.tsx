@@ -13,12 +13,13 @@ interface ExperienciaProps {
     boxTranslations: {
       verRepositorio: string;
     };
-  }
+  };
+  isDark: boolean;
 }
 
-const Experiencia: React.FC<ExperienciaProps> = ({ translations }) => {
+const Experiencia: React.FC<ExperienciaProps> = ({ translations, isDark }) => {
   return (
-    <div className='flex flex-col items-center justify-center mt-10 w-full mb-8'> {/* ACA SEPARO DEL SEPARATOR */}
+    <div className={`flex flex-col items-center justify-center mt-10 w-full mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
       <p className='lg:text-5xl text-4xl mb-14'>{translations.title}</p>
       <div className='mb-16 flex lg:flex-row flex-col h-full items-center lg:items-baseline lg:h-96 w-screen justify-center lg:gap-6'>
         {translations.projects.map((project, index) => (

@@ -41,13 +41,13 @@ return (
         <Reveal width='100%'>
           <Separator isDark={isDark} />
         </Reveal>
-        {/* <Reveal width="100%">
+        <Reveal width="100%">
           <Experiencia translations={translations.experiencia} isDark={isDark} />
         </Reveal>
         <Reveal width='100%'>
-          <Separator />
+          <Separator isDark={isDark} />
         </Reveal>
-        <Reveal width="100%">
+        {/* <Reveal width="100%">
           <Stack isDark={isDark} />
         </Reveal>
         <Reveal width='100%'>

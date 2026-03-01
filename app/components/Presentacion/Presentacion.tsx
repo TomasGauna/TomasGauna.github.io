@@ -20,7 +20,6 @@ interface PresentacionProps {
 const Presentacion: React.FC<PresentacionProps> = ({ translations, isDark }) => {
   return (
     <div>
-      
       {/* HERO con imagen de fondo */}
       <div className="relative flex items-center justify-center overflow-hidden min-h-[600px] pt-16">
         
@@ -69,7 +68,7 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations, isDark }) => 
       </div>
 
       {/* Descripción debajo del hero */}
-      <div className="text-center lg:mt-16 lg:text-xl mt-10 text-sm w-11/12 mx-auto flex flex-col items-center gap-3 mb-14">
+      <div className="text-center lg:max-w-4xl lg:mt-16 lg:text-xl mt-10 text-sm w-11/12 mx-auto flex flex-col items-center gap-3 mb-14">
         <p>{translations.descripcion1}</p>
         <p>
           {translations.descripcion2}{' '}
