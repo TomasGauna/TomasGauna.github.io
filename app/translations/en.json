@@ -9,8 +9,11 @@
         "descripcion2": "With 2 years of development experience, I currently work as a Junior Consultant implementing integrations, process automation, and API-based solutions at ",
         "descripcion3": "I work across both backend and frontend development, using Docker containers, REST services, and automation tools, always aiming to build scalable and maintainable solutions."
     },
+    "tecnologia": {
+      "titulo": "Technologies"
+    },
     "experiencia": {
-        "title": "Experiencia",
+        "title": "Experience",
         "projects": [
             {
                 "title": "Tabla Didáctica",
