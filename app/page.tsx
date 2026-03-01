@@ -45,15 +45,12 @@ return (
         <Reveal width="100%">
           <TechSlider isDark={isDark} translations={translations.tecnologia}/>
         </Reveal>
+        <Reveal width="100%">
+          <Experiencia translations={translations.experiencia} isDark={isDark} />
+        </Reveal>
         <Reveal width='100%'>
           <Separator isDark={isDark} />
         </Reveal>
-        {/* <Reveal width="100%">
-          <Experiencia translations={translations.experiencia} isDark={isDark} />
-        </Reveal> 
-        <Reveal width='100%'>
-          <Separator isDark={isDark} />
-        </Reveal>*/}
         {/* <Reveal width="100%">
           <Educacion isDark={isDark} />
         </Reveal>
@@ -62,8 +59,8 @@ return (
         </Reveal>
         <Reveal width="100%">
           <Contacto isDark={isDark} />
-        </Reveal>
-        <Reveal width='100%'>
+        </Reveal> */}
+        {/* <Reveal width='100%'>
           <Separator />
         </Reveal>
         <Footer isDark={isDark} /> */}

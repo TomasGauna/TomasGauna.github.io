@@ -14,6 +14,19 @@
   },
   "experiencia": {
     "title": "Experiencia",
+    "projectsTitle": "Proyectos",
+    "companies": [
+      {
+        "name": "NETNIX S.A.",
+        "role": "Consultor Junior",
+        "period": "Abr 2024 — Presente",
+        "present": "Presente",
+        "description": "Trabajo en el equipo de Service Management desarrollando integraciones con InvGate, automatizaciones con Python, y soluciones backend/frontend con Django.",
+        "logo": "/experiencia/netnix.webp",
+        "logoDark": "/experiencia/netnixb.webp",
+        "url": "https://www.netnix.net/"
+      }
+    ],
     "projects": [
       {
         "title": "Tabla Didáctica",

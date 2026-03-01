@@ -68,7 +68,7 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations, isDark }) => 
       </div>
 
       {/* Descripción debajo del hero */}
-      <div className="text-center lg:max-w-4xl lg:mt-16 lg:text-xl mt-10 text-sm w-11/12 mx-auto flex flex-col items-center gap-3 mb-14">
+      <div className="text-center lg:max-w-4xl lg:mt-16 lg:text-xl mt-10 text-sm w-11/12 mx-auto flex flex-col items-center gap-3 mb-12">
         <p>{translations.descripcion1}</p>
         <p>
           {translations.descripcion2}{' '}

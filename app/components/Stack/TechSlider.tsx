@@ -42,6 +42,8 @@ const TechSlider = ({ isDark = false, translations }: TechSliderProps) => {
         { name: 'NestJS', image: '/iconos/nestjs.png', url: 'https://nestjs.com/' },
         { name: 'NextJS', image: '/iconos/nextjs.png', url: 'https://nextjs.org/' },
         { name: 'AWS', image: '/iconos/aws.png', url: 'https://aws.amazon.com/' },
+        { name: 'Vercel', image: '/iconos/vercel.png', url: 'https://vercel.com/' },
+        { name: 'Power Automate', image: '/iconos/powerautomate.png', url: 'https://flow.microsoft.com/' },
     ];
 
     const TechItem = ({ tech }: { tech: typeof technologies[0] }) => (
@@ -65,14 +67,26 @@ const TechSlider = ({ isDark = false, translations }: TechSliderProps) => {
     );
 
     return (
-        <div className="w-full">
-            <p className="lg:text-5xl text-4xl mb-9 text-center">{translations.titulo}</p>
+        <div className="w-full mt-14 lg:mb-14">
+            <p className="lg:text-5xl text-4xl mb-14 text-center">{translations.titulo}</p>
 
-            <div className={`w-full rounded-3xl transition-colors duration-300 ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
+            <div className={`w-full rounded-3xl transition-colors duration-300`}>
 
                 {/* Slider — solo en desktop */}
                 <div className="hidden md:block relative overflow-hidden py-6">
-                    <div className="flex w-max gap-10 [animation:slide_40s_linear_infinite] hover:[animation-play-state:paused] will-change-transform">
+                    <style>{`
+                        @keyframes slide {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-33.333333%); }
+                        }
+                        .slider-track {
+                            animation: slide 40s linear infinite;
+                        }
+                        .slider-track:hover {
+                            animation-play-state: paused;
+                        }
+                    `}</style>
+                    <div className="slider-track flex w-max gap-10 will-change-transform">
                         {technologies.concat(technologies, technologies).map((tech, index) => (
                             <TechItem key={`slider-${index}`} tech={tech} />
                         ))}
