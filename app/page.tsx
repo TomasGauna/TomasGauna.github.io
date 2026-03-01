@@ -51,19 +51,16 @@ return (
         <Reveal width='100%'>
           <Separator isDark={isDark} />
         </Reveal>
-        {/* <Reveal width="100%">
-          <Educacion isDark={isDark} />
+        <Reveal width="100%">
+          <Educacion isDark={isDark} translations={translations.educacion} />
+        </Reveal>
+       {/*  <Reveal width="100%">
+          <Contacto isDark={isDark} />
         </Reveal>
         <Reveal width='100%'>
           <Separator />
-        </Reveal>
-        <Reveal width="100%">
-          <Contacto isDark={isDark} />
         </Reveal> */}
-        {/* <Reveal width='100%'>
-          <Separator />
-        </Reveal>
-        <Footer isDark={isDark} /> */}
+        <Footer translations={translations.footer} isDark={isDark} />
       </div>
       <ToastContainer />
     </div>

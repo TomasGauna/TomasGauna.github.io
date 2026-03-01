@@ -6,18 +6,29 @@ interface BoxProps {
         imgSrc: string,
         description: string,
         date: string,
-    }
+    },
+    isDark?: boolean
 }
 
-function BoxE({education}: BoxProps) {
+function BoxE({ education, isDark = false }: BoxProps) {
     return (
-        <div className='w-10/12 h-full bg-white rounded-md shadow-md hover:scale-105 transition-transform duration-300 overflow-hidden'>
+        <div className={`w-full rounded-2xl shadow-md hover:scale-105 transition-transform duration-300 overflow-hidden ${isDark ? 'bg-gray-800' : 'bg-white'}`}>
             <div className='p-5 flex flex-col gap-3'>
-                <div className='flex flex-col lg:flex-row items-center text-xl'>
-                    <Image src={education.imgSrc} alt={""} width={200} height={200}></Image>
-                    <p className='break-all'>{education.description}</p>
+                <div className='flex flex-col lg:flex-row items-center gap-4'>
+                    <Image
+                        src={education.imgSrc}
+                        alt={education.description}
+                        width={200}
+                        height={200}
+                        className="object-contain"
+                    />
+                    <p className={`text-base lg:text-lg ${isDark ? 'text-gray-200' : 'text-gray-800'}`}>
+                        {education.description}
+                    </p>
                 </div>
-                <p className='text-center text-lg italic text-zinc-500 lg:mt-0 mt-3'>{education.date}</p>
+                <p className={`text-center text-sm italic lg:mt-0 mt-2 ${isDark ? 'text-gray-400' : 'text-zinc-500'}`}>
+                    {education.date}
+                </p>
             </div>
         </div>
     )
