@@ -7,11 +7,12 @@ import 'react-toastify/dist/ReactToastify.css';
 interface HeaderProps {
   onLanguageChange: (language: string) => void;
   onThemeChange: (isDark: boolean) => void;
+  isDark: boolean;
 }
 
-export function Header({ onLanguageChange, onThemeChange }: HeaderProps) {
+export function Header({ onLanguageChange, onThemeChange, isDark }: HeaderProps) {
   const [language, setLanguage] = useState('es');
-  const [isDark, setIsDark] = useState(false);
+  const [isDarkState, setIsDarkState] = useState(isDark);
 
   const handleCopyToClipboard = () => {
     const email = 'tomi.gauna08@gmail.com';
@@ -57,8 +58,8 @@ export function Header({ onLanguageChange, onThemeChange }: HeaderProps) {
   };
 
   const handleThemeChange = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
+    const newTheme = !isDarkState;
+    setIsDarkState(newTheme);
     onThemeChange(newTheme);
     document.documentElement.classList.toggle('dark', newTheme);
   }

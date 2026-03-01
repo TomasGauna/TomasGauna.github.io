@@ -17,39 +17,69 @@ interface PresentacionProps {
 
 const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
   return (
-    <div className='mb-14'> {/* ACA SEPARO DEL SEPARATOR */}
-      <div className="flex justify-center lg:gap-14 lg:mt-16 mt-10 lg:flex-row flex-col">
-        <div className="flex justify-center">
-          <Image
-            src={'/foto/tomi.jpg'}
-            alt={''}
-            width={400}
-            height={400}
-            className="rounded-full shadow-xl hover:scale-110 transition-transform lg:w-[400px] lg:h-[400px] w-72"
-          />
-        </div>
-        <div className="flex justify-center items-center text-center">
-          <div className="flex flex-col gap-1 w-full">
-            <p className="lg:text-7xl text-4xl lg:mt-0 mt-10 font-black">{translations.nombre}</p>
-            <p className="lg:text-3xl text-xl lg:mt-6 mt-4">{translations.titulo}</p>
-            <p className="lg:text-xl text-sm">{translations.educacion}</p>
-            <div className="flex justify-center gap-20 lg:mt-4 mt-6">
+    <div>
+      
+      {/* HERO con imagen de fondo */}
+      <div className="relative flex items-center justify-center overflow-hidden min-h-[600px] pt-16">
+        
+        {/* Imagen de fondo */}
+        <Image
+          src="/foto/fondo-presentacion.jpg"
+          alt="Fondo"
+          fill
+          className="object-cover"
+          priority
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-blue-950/40" />
+
+        {/* Contenido */}
+        <div className="relative z-10 flex justify-center items-center gap-10 lg:gap-24 lg:flex-row flex-col w-full max-w-5xl mx-auto px-8 lg:px-12 py-16 lg:py-24">
+          
+          {/* Texto izquierda */}
+          <div className="flex flex-col gap-2 lg:gap-4 text-center lg:text-left text-white w-full">
+            <p className="lg:text-7xl text-5xl font-black leading-tight tracking-wide">
+              {translations.nombre}
+            </p>
+            <p className="lg:text-2xl text-lg font-semibold tracking-widest uppercase mt-1 lg:mt-2">
+              {translations.titulo}
+            </p>
+            <p className="lg:text-lg text-sm text-gray-300 font-light">
+              {translations.educacion}
+            </p>
+            <div className="flex lg:justify-start justify-center mt-2 lg:mt-4">
               <Button label={translations.boton} />
             </div>
           </div>
+
+          {/* Foto derecha */}
+          <div className="flex justify-center shrink-0">
+            <Image
+              src="/foto/tomi.jpg"
+              alt="Foto de perfil"
+              width={320}
+              height={320}
+              className="rounded-full shadow-2xl border-4 border-white/40 hover:scale-105 transition-transform duration-300 lg:w-[300px] lg:h-[300px] w-40 h-40 object-cover"
+            />
+          </div>
+
         </div>
       </div>
-      <div className="text-center lg:mt-28 lg:text-2xl mt-14 text-md w-11/12 mx-auto flex flex-col items-center">
-        <p className="mb-1">{translations.descripcion1}</p>
-        <p className="mb-2">
+
+      {/* Descripción debajo del hero */}
+      <div className="text-center lg:mt-16 lg:text-xl mt-10 text-sm w-11/12 mx-auto flex flex-col items-center gap-3 mb-14">
+        <p>{translations.descripcion1}</p>
+        <p>
           {translations.descripcion2}{' '}
-          <Link className="hover:underline text-blue-600 active:text-blue-900" href="https://www.netnix.net/" target="_blank">
+          <Link className="hover:underline text-blue-500 active:text-blue-900" href="https://www.netnix.net/" target="_blank">
             NETNIX
           </Link>
           .
         </p>
-        <p className="mb-4">{translations.descripcion3}</p>
+        <p>{translations.descripcion3}</p>
       </div>
+
     </div>
   );
 };
