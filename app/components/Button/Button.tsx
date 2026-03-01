@@ -3,10 +3,13 @@ import './styles/Button.css';
 
 interface ButtonProps {
   label: string;
+  language?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label }) => {
+const Button: React.FC<ButtonProps> = ({ label, language = 'es' }) => {
   const [isLoading, setIsLoading] = useState(false);
+
+  const loadingText = language === 'es' ? 'Descargando...' : 'Downloading...';
 
   const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -14,10 +17,9 @@ const Button: React.FC<ButtonProps> = ({ label }) => {
     setIsLoading(true);
     
     try {
-      // Introducir un retraso de 2 segundos (2000 milisegundos)
       await delay(1500);
 
-      const response = await fetch('/cv/CV.pdf');
+      const response = language === 'es' ? await fetch('/cv/CV_TomasGauna_Español.pdf') : await fetch('/cv/CV_TomasGauna_English.pdf');
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       
@@ -36,7 +38,7 @@ const Button: React.FC<ButtonProps> = ({ label }) => {
 
   return (
     <button onClick={handleClick} className={`button ${isLoading ? "loading" : ""}`}>
-      <span>{isLoading ? "Descargando..." : label}</span>
+      <span>{isLoading ? loadingText : label}</span>
     </button>
   );
 };

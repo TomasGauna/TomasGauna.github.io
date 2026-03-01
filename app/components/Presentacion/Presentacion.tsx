@@ -9,6 +9,7 @@ interface PresentacionProps {
         titulo: string;
         educacion: string;
         boton: string;
+        label?: string;
         descripcion1: string;
         descripcion2: string;
         descripcion3: string;
@@ -61,7 +62,7 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations, isDark }) => 
               {translations.educacion}
             </p>
             <div className="flex justify-center mt-2 lg:mt-4">
-              <Button label={translations.boton} />
+              <Button label={translations.boton} language={translations.label || 'es'} />
             </div>
           </div>
         </div>

@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 interface HeaderProps {
   onLanguageChange: (language: string) => void;
@@ -13,86 +11,24 @@ interface HeaderProps {
 export function Header({ onLanguageChange, onThemeChange, isDark }: HeaderProps) {
   const [language, setLanguage] = useState('es');
   const [isDarkState, setIsDarkState] = useState(isDark);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const languages = [
-    { code: 'es', label: '', flag: '🇦🇷' },
-    { code: 'en', label: '', flag: '🇺🇸' },
-  ];
-
-  const current = languages.find(l => l.code === language)!;
-
-  const handleCopyToClipboard = () => {
-    const email = 'tomi.gauna08@gmail.com';
-    const tempTextarea = document.createElement('textarea');
-    tempTextarea.value = email;
-    document.body.appendChild(tempTextarea);
-    tempTextarea.select();
-
-    try {
-      const successful = document.execCommand('copy');
-      if (successful) {
-        toast.success('Correo copiado al portapapeles', {
-          position: 'bottom-right',
-          autoClose: 3000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      } else {
-        toast.error('No se pudo copiar el correo al portapapeles', {
-          position: 'bottom-right',
-          autoClose: 3000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      }
-    } catch (err) {
-      console.error('No se pudo copiar el texto: ', err);
-    } finally {
-      document.body.removeChild(tempTextarea);
-    }
-  };
-
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedLanguage = e.target.value;
-    setLanguage(selectedLanguage);
-    onLanguageChange(selectedLanguage);
-  };
 
   const handleThemeChange = () => {
     const newTheme = !isDarkState;
     setIsDarkState(newTheme);
     onThemeChange(newTheme);
     document.documentElement.classList.toggle('dark', newTheme);
-  }
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (!(e.target as Element).closest('.relative')) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  };
 
   return (
     <header className={`w-full shadow-md fixed top-0 left-0 z-50 transition-colors duration-300 ${isDark ? 'bg-gray-900' : 'bg-gray-100'}`}>
       <div className='max-w-4xl mx-auto py-4 px-6 flex justify-between items-center'>
 
-        <span className={`font-medium text-sm sm:text-base ${isDark ? 'text-white' : 'text-gray-900'}`}>
+        <span className={`font-medium text-xs sm:text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
           Tomas Gauna
         </span>
 
         <div className='flex gap-3 items-center'>
 
-          {/* Links sociales */}
           <div className='flex gap-2 items-center'>
             <Link href='https://github.com/TomasGauna/' target="_blank">
               <Image
@@ -114,27 +50,22 @@ export function Header({ onLanguageChange, onThemeChange, isDark }: HeaderProps)
             </Link>
           </div>
 
-          {/* Divisor */}
           <div className={`w-px h-4 ${isDark ? 'bg-gray-600' : 'bg-gray-300'}`} />
 
-          <div className='flex gap-1 items-center'>
-            <button
-              onClick={() => {
-                const next = language === 'es' ? 'en' : 'es';
-                setLanguage(next);
-                onLanguageChange(next);
-              }}
-              className={`text-xs font-mono font-semibold tracking-wider transition-colors duration-200 w-6 text-center ${isDark ? 'text-white hover:text-blue-400' : 'text-gray-900 hover:text-blue-500'}`}
-              title={language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
-            >
-              {language === 'es' ? 'ES' : 'EN'}
-            </button>
-          </div>
+          <button
+            onClick={() => {
+              const next = language === 'es' ? 'en' : 'es';
+              setLanguage(next);
+              onLanguageChange(next);
+            }}
+            className={`text-xs font-mono font-semibold tracking-wider transition-colors duration-200 w-6 text-center ${isDark ? 'text-white hover:text-blue-400' : 'text-gray-900 hover:text-blue-500'}`}
+            title={language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+          >
+            {language === 'es' ? 'ES' : 'EN'}
+          </button>
 
-          {/* Divisor */}
           <div className={`w-px h-4 ${isDark ? 'bg-gray-600' : 'bg-gray-300'}`} />
 
-          {/* Tema */}
           <button
             onClick={handleThemeChange}
             className={`p-1 rounded-full transition-colors duration-300 ${isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-200'}`}

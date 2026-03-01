@@ -4,6 +4,7 @@
       "titulo": "DESARROLLADOR DE SOFTWARE",
       "educacion": "Técnico Universitario en Programación de UTN",
       "boton": "Descargar CV",
+      "label": "es",
       "descripcion1": "Desarrollador orientado a resultados, con fuerte interés en la arquitectura y la integración de sistemas.",
       "descripcion2": "Con 2 años de experiencia en desarrollo, actualmente trabajo como Consultor Junior implementando integraciones, automatizaciones y soluciones basadas en APIs en ",
       "descripcion3": "Me desempeño tanto en backend como en frontend, trabajando con contenedores Docker, servicios REST y herramientas de automatización, siempre buscando soluciones escalables y mantenibles."
