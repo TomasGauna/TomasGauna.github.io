@@ -17,46 +17,54 @@ import Separator from './components/Separator/Separator';
 
 export default function Home() {
   const [language, setLanguage] = useState('es');
+  const [isDark, setIsDark] = useState(false);
+
   const handleLanguageChange = (language: string) => {
     setLanguage(language);
+  };
+
+  const handleThemeChange = (dark: boolean) => {
+    setIsDark(dark);
   };
 
   const translations = language === 'es' ? translationsES : translationsEN;
 
   return (
-    <div className='w-screen h-screen'>
-      <Header onLanguageChange={handleLanguageChange} />
-      <Reveal width="100%">
-        <Presentacion translations={translations.presentacion} />
-      </Reveal>
-      <Reveal width='100%'>
-        <Separator />
-      </Reveal>
-      <Reveal width="100%">
-        <Experiencia translations={translations.experiencia} />
-      </Reveal>
-      <Reveal width='100%'>
-        <Separator />
-      </Reveal>
-      <Reveal width="100%">
-        <Stack />
-      </Reveal>
-      <Reveal width='100%'>
-        <Separator />
-      </Reveal>
-      <Reveal width="100%">
-        <Educacion />
-      </Reveal>
-      <Reveal width='100%'>
-        <Separator />
-      </Reveal>
-      <Reveal width="100%">
-        <Contacto />
-      </Reveal>
-      <Reveal width='100%'>
-        <Separator />
-      </Reveal>
-      <Footer />
+    <div className={`min-h-screen w-full overflow-x-hidden ${isDark ? 'bg-gray-900' : 'bg-white'} transition-colors duration-300`}>
+      <Header onLanguageChange={handleLanguageChange} onThemeChange={handleThemeChange} />
+      <div className='max-w-4xl mx-auto px-6 pt-20'>
+        <Reveal width="100%">
+          <Presentacion translations={translations.presentacion} />
+        </Reveal>
+        <Reveal width='100%'>
+          <Separator />
+        </Reveal>
+        <Reveal width="100%">
+          <Experiencia translations={translations.experiencia} />
+        </Reveal>
+        <Reveal width='100%'>
+          <Separator />
+        </Reveal>
+        <Reveal width="100%">
+          <Stack />
+        </Reveal>
+        <Reveal width='100%'>
+          <Separator />
+        </Reveal>
+        <Reveal width="100%">
+          <Educacion />
+        </Reveal>
+        <Reveal width='100%'>
+          <Separator />
+        </Reveal>
+        <Reveal width="100%">
+          <Contacto />
+        </Reveal>
+        <Reveal width='100%'>
+          <Separator />
+        </Reveal>
+        <Footer />
+      </div>
       <ToastContainer />
     </div>
   );
