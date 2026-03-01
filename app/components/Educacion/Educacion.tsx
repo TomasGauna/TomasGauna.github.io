@@ -1,23 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 
-const educations = [
-  {
-    imgSrc: '/educacion/arg-programa-inv.png',
-    description: 'Descripción del curso/programa Arg Programa',
-    date: 'Feb 2022  - Mar 2022',
-  },
-  {
-    imgSrc: '/educacion/utn-2.png',
-    description: 'Descripción del curso/programa UTN',
-    date: 'Feb 2022 - Dic 2023',
-  },
-  {
-    imgSrc: '/educacion/codo-codo.png',
-    description: 'Descripción del curso/programa Codo a Codo',
-    date: 'Mar 2024 - Ago 2024',
-  },
-];
+interface Education {
+  imgSrc: string;
+  institution: string;
+  description: string;
+  date: string;
+}
+
+interface EducacionProps {
+  isDark?: boolean;
+  translations: {
+    title: string;
+    educations: Education[];
+  };
+}
 
 function Educacion({ isDark = false, translations }: EducacionProps) {
   return (

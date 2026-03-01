@@ -5,8 +5,11 @@
         "educacion": "University Programming Technician – UTN",
         "boton": "Download CV",
         "descripcion1": "A Buenos Aires native, whose passion for the world of programming drives him to find innovative solutions to software development challenges.",
-        "descripcion2": "With 2 years of programming experience and currently working as a Junior Consultant at",
+        "descripcion2": "With 2 years of programming experience and currently working as a Junior Consultant at ",
         "descripcion3": "I enjoy both backend and frontend development."
+    },
+    "tecnologia": {
+        "titulo": "Technologies"
     },
     "experiencia": {
         "title": "Experience",
