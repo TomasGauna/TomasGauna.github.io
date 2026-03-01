@@ -34,7 +34,7 @@ return (
       <Header onLanguageChange={handleLanguageChange} onThemeChange={handleThemeChange} isDark={isDark} />
       
       <Reveal width="100%">
-        <Presentacion translations={translations.presentacion} />
+        <Presentacion translations={translations.presentacion} isDark={isDark} />
       </Reveal>
 
       <div className='max-w-4xl mx-auto px-6'>

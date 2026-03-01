@@ -13,9 +13,10 @@ interface PresentacionProps {
         descripcion2: string;
         descripcion3: string;
     };
+    isDark: boolean;
 }
 
-const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
+const Presentacion: React.FC<PresentacionProps> = ({ translations, isDark }) => {
   return (
     <div>
       
@@ -31,8 +32,8 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
           priority
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-blue-950/40" />
+        {/* Overlay - solo en light mode */}
+        <div className={`absolute inset-0 transition-colors duration-300 ${isDark ? 'bg-transparent' : 'bg-blue-950/40'}`} />
 
         {/* Contenido */}
         <div className="relative z-10 flex justify-center items-center gap-10 lg:gap-24 lg:flex-row flex-col w-full max-w-5xl mx-auto px-8 lg:px-12 py-16 lg:py-24">
