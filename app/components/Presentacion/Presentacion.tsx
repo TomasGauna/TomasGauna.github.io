@@ -37,8 +37,19 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
         {/* Contenido */}
         <div className="relative z-10 flex justify-center items-center gap-10 lg:gap-24 lg:flex-row flex-col w-full max-w-5xl mx-auto px-8 lg:px-12 py-16 lg:py-24">
           
-          {/* Texto izquierda */}
-          <div className="flex flex-col gap-2 lg:gap-4 text-center lg:text-left text-white w-full">
+          {/* Foto - arriba en mobile, derecha en desktop */}
+          <div className="flex justify-center shrink-0 lg:order-2">
+            <Image
+              src="/foto/tomi.jpg"
+              alt="Foto de perfil"
+              width={320}
+              height={320}
+              className="rounded-full shadow-2xl border-4 border-white/40 hover:scale-105 transition-transform duration-300 lg:w-[300px] lg:h-[300px] w-40 h-40 object-cover"
+            />
+          </div>      
+
+          {/* Texto - abajo en mobile, izquierda en desktop */}
+          <div className="flex flex-col gap-2 lg:gap-4 text-center lg:text-left text-white w-full lg:order-1">
             <p className="lg:text-7xl text-5xl font-black leading-tight tracking-wide">
               {translations.nombre}
             </p>
@@ -48,22 +59,10 @@ const Presentacion: React.FC<PresentacionProps> = ({ translations }) => {
             <p className="lg:text-lg text-sm text-gray-300 font-light">
               {translations.educacion}
             </p>
-            <div className="flex lg:justify-start justify-center mt-2 lg:mt-4">
+            <div className="flex justify-center mt-2 lg:mt-4">
               <Button label={translations.boton} />
             </div>
           </div>
-
-          {/* Foto derecha */}
-          <div className="flex justify-center shrink-0">
-            <Image
-              src="/foto/tomi.jpg"
-              alt="Foto de perfil"
-              width={320}
-              height={320}
-              className="rounded-full shadow-2xl border-4 border-white/40 hover:scale-105 transition-transform duration-300 lg:w-[300px] lg:h-[300px] w-40 h-40 object-cover"
-            />
-          </div>
-
         </div>
       </div>
 

@@ -1,16 +1,60 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-function Separator() {
+interface SeparatorProps {
+    isDark?: boolean;
+}
+
+function Separator({ isDark = false }: SeparatorProps) {
+    const [progress, setProgress] = useState(0);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setProgress(0);
+                    let current = 0;
+                    const interval = setInterval(() => {
+                        current += 1;
+                        setProgress(current);
+                        if (current >= 100) clearInterval(interval);
+                    }, 20);
+                }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className="flex items-center justify-center my-8">
-            <div className="w-10/12  flex items-center">
-                <div className="border-t border-gray-300 flex-grow"></div>
-                <div className="mx-4">
-                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.18 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                    </svg>
+        <div ref={ref} className="flex items-center justify-center my-10">
+            <div className="w-11/12 sm:w-10/12 flex items-center">
+
+                {/* Línea izquierda */}
+                <div className={`flex-grow h-[1px] sm:h-[1px] rounded-full overflow-hidden ${isDark ? 'bg-gray-500' : 'bg-gray-200'}`}>
+                    <div
+                        className="h-full"
+                        style={{
+                            width: `${progress}%`,
+                            marginLeft: 'auto',
+                            background: 'linear-gradient(to left, #2c90f3, transparent)',
+                        }}
+                    />
                 </div>
-                <div className="border-t border-gray-300 flex-grow"></div>
+
+                {/* Línea derecha */}
+                <div className={`flex-grow h-[1px] sm:h-[1px] rounded-full overflow-hidden ${isDark ? 'bg-gray-500' : 'bg-gray-200'}`}>
+                    <div
+                        className="h-full"
+                        style={{
+                            width: `${progress}%`,
+                            background: 'linear-gradient(to right, #2c90f3, transparent)',
+                        }}
+                    />
+                </div>
+
             </div>
         </div>
     );
