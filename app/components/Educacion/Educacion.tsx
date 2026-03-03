@@ -19,7 +19,7 @@ interface EducacionProps {
 function Educacion({ isDark = false, translations }: EducacionProps) {
   return (
     <div className='flex flex-col items-center justify-start mt-8 w-full mb-6'>
-      <p className='lg:text-5xl text-4xl text-center mb-14'>{translations.title}</p>
+      <p className='lg:text-4xl text-3xl text-center mb-14'>{translations.title}</p>
 
       <div className='w-full flex flex-col gap-0'>
         {translations.educations.map((education, index) => (

@@ -60,9 +60,9 @@ return (
         <Reveal width='100%'>
           <Separator />
         </Reveal> */}
-        <Footer translations={translations.footer} isDark={isDark} />
       </div>
-      <ToastContainer />
+      <Footer translations={translations.footer} isDark={isDark} />
+      {/* <ToastContainer /> */}
     </div>
   );
 }

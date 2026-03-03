@@ -35,7 +35,7 @@ interface ExperienciaProps {
 const Experiencia: React.FC<ExperienciaProps> = ({ translations, isDark }) => {
   return (
     <div className={`flex flex-col items-center justify-center mt-10 w-full mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-      <p className='lg:text-5xl text-4xl mb-16'>{translations.title}</p>
+      <p className='lg:text-4xl text-3xl mb-16'>{translations.title}</p>
 
       {/* Cards empresas */}
       <div className="w-full flex flex-col gap-4 mb-16">
