@@ -10,7 +10,13 @@
     "descripcion3": "Me especializo en construir soluciones completas, desde APIs y automatizaciones hasta interfaces funcionales, siempre buscando escalabilidad y mantenibilidad."
   },
   "tecnologia": {
-    "titulo": "Tecnologías"
+    "titulo": "Tecnologías",
+    "categorias": {
+      "lenguajes": "Lenguajes",
+      "frameworks": "Frameworks",
+      "databases": "Bases de Datos",
+      "devops": "DevOps"
+    }
   },
   "experiencia": {
     "title": "Experiencia",

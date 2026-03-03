@@ -6,6 +6,12 @@ interface TechSliderProps {
     isDark?: boolean;
     translations: {
         titulo: string;
+        categorias: {
+            lenguajes: string;
+            frameworks: string;
+            databases: string;
+            devops: string;
+        };
     };
 }
 
@@ -14,7 +20,7 @@ const TechSlider = ({ isDark = false, translations }: TechSliderProps) => {
 
     const categories = [
         {
-            label: 'Lenguajes',
+            label: translations.categorias.lenguajes,
             techs: [
                 { name: 'C', image: '/iconos/c.png', url: 'https://en.cppreference.com/w/c' },
                 { name: 'C++', image: '/iconos/cplus.png', url: 'https://en.cppreference.com/w/cpp' },
@@ -29,7 +35,7 @@ const TechSlider = ({ isDark = false, translations }: TechSliderProps) => {
             ],
         },
         {
-            label: 'Frameworks',
+            label: translations.categorias.frameworks,
             techs: [
                 { name: 'React', image: '/iconos/react.png', url: 'https://reactjs.org/' },
                 { name: 'Angular', image: '/iconos/angular.png', url: 'https://angular.io/' },
@@ -47,7 +53,7 @@ const TechSlider = ({ isDark = false, translations }: TechSliderProps) => {
             ],
         },
         {
-            label: 'Databases',
+            label: translations.categorias.databases,
             techs: [
                 { name: 'SQL', image: '/iconos/sql.png', url: 'https://www.w3schools.com/sql/' },
                 { name: 'NoSQL', image: '/iconos/nosql.png', url: 'https://en.wikipedia.org/wiki/NoSQL' },
@@ -57,7 +63,7 @@ const TechSlider = ({ isDark = false, translations }: TechSliderProps) => {
             ],
         },
         {
-            label: 'DevOps',
+            label: translations.categorias.devops,
             techs: [
                 { name: 'Git', image: '/iconos/git.png', url: 'https://git-scm.com/' },
                 { name: 'Docker', image: '/iconos/docker.png', url: 'https://www.docker.com/' },
