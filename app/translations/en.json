@@ -3,6 +3,7 @@
         "nombre": "TOMAS GAUNA",
         "titulo": "SOFTWARE DEVELOPER",
         "educacion": "University Programming Technician – UTN",
+        "label": "en",
         "boton": "Download CV",
         "descripcion1": "Fullstack developer with experience in backend, frontend, and integrations.",
         "descripcion2": "With 2 years of experience in development, I currently work as a Junior Consultant implementing integrations, automations, and API-based solutions at ",
@@ -78,16 +79,16 @@
         "title": "Training",
         "educations": [
             {
-                "imgSrc": "/educacion/arg-programa-inv.png",
-                "institution": "Argentina Programa",
-                "description": "Initial course focused on building a solid foundation in programming, including logic, algorithms, and fundamental structures for software development.",
-                "date": "Feb 2022 — Mar 2022"
-            },
-            {
                 "imgSrc": "/educacion/utn-2.png",
                 "institution": "Universidad Tecnológica Nacional",
                 "description": "University Technical Degree in Programming providing comprehensive training in software development, including data structures, object-oriented programming, database management, and software engineering principles.",
                 "date": "Feb 2022 — Dic 2023"
+            },
+            {
+                "imgSrc": "/educacion/arg-programa-inv.png",
+                "institution": "Argentina Programa",
+                "description": "Initial course focused on building a solid foundation in programming, including logic, algorithms, and fundamental structures for software development.",
+                "date": "Feb 2022 — Mar 2022"
             }
         ]
     },

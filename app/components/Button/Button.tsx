@@ -19,16 +19,22 @@ const Button: React.FC<ButtonProps> = ({ label, language = 'es' }) => {
     try {
       await delay(1500);
 
-      const response = language === 'es' ? await fetch('/cv/CV_TomasGauna_Español.pdf') : await fetch('/cv/CV_TomasGauna_English.pdf');
+      const response = language === 'es'
+        ? await fetch('/cv/CV_TomasGauna_Espaniol.pdf')
+        : await fetch('/cv/CV_TomasGauna_English.pdf');
+
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'CV Tomás Gauna.pdf';
+      a.download = language === 'es' ? 'CV Tomás Gauna ES.pdf' : 'CV Tomás Gauna EN.pdf';
       document.body.appendChild(a);
       a.click();
-      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+
+      setTimeout(() => window.URL.revokeObjectURL(url), 1000);
+
     } catch (error) {
       console.error('Error al descargar el archivo:', error);
     } finally {
